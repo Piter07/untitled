@@ -57,6 +57,7 @@ public class AgregarProducto extends HttpServlet {
 
 
         System.out.println(id + " " + nombre + " " + precio + " " + proveedor + " " + costo);
+
         response.sendRedirect("/ConsultaBD/consultaP");
 
         if (this.connection == null) return;

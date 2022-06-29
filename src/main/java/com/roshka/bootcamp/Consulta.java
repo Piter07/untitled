@@ -38,7 +38,7 @@ public class Consulta extends HttpServlet {
     }
 
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse res) {
+    public void doPost(HttpServletRequest req, HttpServletResponse res) {
         System.out.println("pasa por aca uwuwuwu");
         try {
             Statement stmt = connection.createStatement();

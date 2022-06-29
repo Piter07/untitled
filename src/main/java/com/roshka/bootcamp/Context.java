@@ -43,6 +43,7 @@ public class Context extends HttpServlet {
         try {
             Statement stmt = connection.createStatement();
             res.setContentType("text/html");
+
             PrintWriter out = res.getWriter();
             ResultSet rs = stmt
                     .executeQuery("select a.nombre, apellido, count(b.cliente_id) Cantidad_factura from cliente a " +

@@ -1,5 +1,6 @@
 package com.roshka.bootcamp;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
@@ -56,13 +57,16 @@ public class AgregarCliente extends HttpServlet {
         String tel = request.getParameter("tel");
 
         System.out.println(id + " " + nombre + " " + apellido + " " + ci + " " + tel);
-        response.sendRedirect("/ConsultaBD/consulta");
+        //response.sendRedirect("/ConsultaBD/consulta");
 
         if (this.connection == null) return;
         String linea = "insert into cliente values ('" + id + "','" + nombre + "','" + apellido + "','" + ci + "','" + tel + "');";
         try {
+            RequestDispatcher view = request.getRequestDispatcher("/consulta");
+            view.forward(request, response);
             Statement tmt = connection.createStatement();
             ResultSet rs = tmt.executeQuery(linea);
+
             tmt.close();
             rs.close();
 

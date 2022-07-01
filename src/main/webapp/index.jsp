@@ -40,6 +40,16 @@
                     </div>
                     </form>
         <br>
+                <form method="post" action="consulta4">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="d-grid gap-2">
+                                             <button class="btn btn-primary" type="submit" style = "margin-left: 25%; height: 100%; width: 50%;"  >Consulta 4</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </form>
+        <br>
         <br>
         <div class="row">
           <div class="col">
